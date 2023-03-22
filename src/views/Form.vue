@@ -15,7 +15,7 @@
         <v-text-field
           v-model="state.email"
           :error-messages="validator.email.$errors.map(e => e.$message)"
-          label="E-mail"
+          label="Email"
           required
           @input="validator.email.$touch"
           @blur="validator.email.$touch"
@@ -25,7 +25,7 @@
           class="me-4"
           @click="validate"
         >
-          submit
+          Login
         </v-btn>
       </form>
     </v-card>
@@ -58,7 +58,7 @@ async function validate(): Promise<void> {
   const isValid = await validator.value.$validate();
 
   if (isValid) {
-    router.push('homepage');
+    router.push('game');
   }
 }
 </script>

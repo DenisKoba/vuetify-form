@@ -3,9 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/homepage',
-    name: 'Homepage',
-    component: () => import('@/views/Home.vue'),
+    path: '/game',
+    name: 'Game',
+    component: () => import('@/views/Game.vue'),
   },
   {
     path: '/',
