@@ -10,7 +10,7 @@
     </v-card>
     <div class="grid">
       <div v-for="i in +sizeY" :key="i" class="row">
-        <div v-for="j in +sizeX" :key="j" class="square"></div>
+        <Square v-for="j in +sizeX" />
       </div>
     </div>
   </div>
@@ -18,6 +18,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import Square from "@/components/Square.vue";
 
 const sizeX = ref(0)
 const sizeY = ref(0)
@@ -48,14 +49,6 @@ const sizeY = ref(0)
 .row {
   display: flex;
   flex-direction: row;
-}
-
-.square {
-  width: 36px;
-  height: 36px;
-  background-color: white;
-  margin: 2px;
-  transition: .3s;
 }
 
 .square:hover {
